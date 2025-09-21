@@ -116,86 +116,122 @@ body {
 }
   
   /* Intro Section */
-  .about {
+ /* About / Technical Skills Section */
+.about {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #0a192f, #112240, #0a192f);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #ccd6f6;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00ffcc;   /* same as professional */
+  font-weight: bold;
+}
+
+.about-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Skill container and cards same as professional */
+.about .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;   /* space between boxes */
+  margin-top: 2rem;
+}
+
+.about .skill-card {
+  background-color: #0d1b2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 250px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about .skill-card i {
+  font-size: 2rem;
+  color: #00ffcc;
+  margin-bottom: 0.8rem;
+}
+
+.about .skill-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+  /* Professional Skill*/
+
+  .professional-skills-section {
     padding: 4rem 0;
     background: #0a192f;
     color: #ccd6f6;
     text-align: center;
   }
-  .about {
-    background: linear-gradient(135deg, #0a192f, #112240, #0a192f);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
+
+  .professional-skills-section .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0; /* Changed from 0.5rem to 0 to remove horizontal gap */
   }
-  
-  @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  .about h2 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    color: #64ffda;
-  }
-  
-  .about-intro {
-    max-width: 700px;
-    margin: 0 auto 3rem auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .skills-title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 5px;
-    margin: 1rem auto 0 auto;
-    background: #64ffda;
-    animation: expand 2s infinite alternate;
-  }
-  
-  @keyframes expand {
-    from { width: 20px; opacity: 1 }
-    to { width: 100px; opacity: 1; }
-  }
-  
-    .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .skill-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
-  }
-  
-  .skill-card.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background: #0f2a4f;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-  }
-  .skill-card i {
-    color: #64ffda;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: block;
-  }
-  
-  .skill-card p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  
+
+  .professional-skills-section {
+  text-align: center;
+  margin-top: 2rem;   /* controls gap from Technical Skills */
+  margin-bottom: 2rem;
+}
+
+.professional-skills-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00ffcc;   /* match your theme */
+  font-weight: bold;
+}
+
+.professional-skills-section .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;   /* space between boxes */
+}
+
+.professional-skills-section .skill-box {
+  background-color: #0d1b2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 250px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.professional-skills-section .skill-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.professional-skills-section .skill-box i {
+  font-size: 2rem;
+  color: #00ffcc;
+  margin-bottom: 0.8rem;
+}
+
  
   /* Responsive */
   @media (max-width: 768px) {
